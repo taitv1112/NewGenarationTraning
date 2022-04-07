@@ -1,10 +1,10 @@
 package tuanlv3.lab8;
 
-public class Subtraction extends BinaryExpression{
+public class Division extends BinaryExpression{
     private Expression left;
     private Expression right;
 
-    public Subtraction(Expression left, Expression right) {
+    public Division(Expression left, Expression right) {
         this.left = left;
         this.right = right;
     }
@@ -21,6 +21,6 @@ public class Subtraction extends BinaryExpression{
 
     @Override
     public int evaluate() {
-        return Math.subtractExact(left().evaluate(), right().evaluate());
+        return Math.floorDiv(left().evaluate(), right().evaluate());
     }
 }
